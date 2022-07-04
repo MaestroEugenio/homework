@@ -3,7 +3,6 @@ package com.service.api;
 import com.bank.jto.BankCard;
 import com.bank.jto.Subscription;
 import com.bank.jto.User;
-import com.cloud.service.impl.BankException;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;

@@ -2,16 +2,14 @@ package com.appserv;
 
 import com.bank.api.Bank;
 import com.bank.jto.*;
-import com.cloud.service.impl.BankException;
+//import com.cloud.service.impl.BankException;
+import com.service.api.BankException;
 import com.service.api.Service;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.ServiceLoader;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
 
 public class AppServiceLoader {
 
@@ -37,6 +35,7 @@ public class AppServiceLoader {
         } catch (BankException e) {
             throw new RuntimeException(e);
         }
+
         if(subs.isPresent())System.out.println(subs);
         System.out.println();
 

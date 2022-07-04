@@ -4,6 +4,7 @@ package com.cloud.service.impl;
 import com.bank.jto.BankCard;
 import com.bank.jto.Subscription;
 import com.bank.jto.User;
+import com.service.api.BankException;
 import com.service.api.Service;
 
 import java.time.LocalDate;
@@ -31,7 +32,7 @@ public class BankService implements Service {
 
     @Override
     public Optional<Subscription> getSubscriptionByBankCardNumber(String number) throws BankException {
-        return Optional.ofNullable(Optional.ofNullable(findSubscriptionByCard(number)).orElseThrow(() -> new BankException()));
+        return Optional.ofNullable(findSubscriptionByCard(number));
     }
 
     private Subscription findSubscriptionByCard(String number){
