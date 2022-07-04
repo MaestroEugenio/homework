@@ -1,0 +1,9 @@
+import com.bank.api.Bank;
+import com.cloud.bank.impl.BankCardFactory;
+
+module jmp.cloud.bank.impl {
+    requires transitive jmp.bank.api;
+    requires jmp.dto;
+    provides Bank with BankCardFactory;
+    exports com.cloud.bank.impl;
+}
